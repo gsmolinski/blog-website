@@ -1,2 +1,2 @@
-# blog_website
+# blog-website
 Website for "Projektowanie stron internetowych" class
