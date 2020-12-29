@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset=”utf-8”>
+    <meta name="Author" content="Grzegorz Smoliński">
+    <meta name="keywords" content="blog, home, about, portfolio">
+    <meta name="description" content="blog_gs">
+    <meta name="robots" content="all">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-me.html">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"></script>
+    <div id="about" class="text-center">
+        <p>About:</p>
+    </div>
+    <div id="about-me-lines" class="row">
+        <div class="col">
+            
+        </div>
+        <div class="col">
+            <div class="me-lines-subtitle">
+                Me
+            </div>
+            <br>
+            <div class="me-lines-description">
+                Just a random line.
+                <br>
+                <br>
+                <br>
+                <canvas id="canvas" width="250" height="100"></canvas>  
+        <script>  
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) 
+         {
+          var ctx = canvas.getContext("2d");
+          var x_point = Math.floor(Math.random() * 250) + 1;
+                ctx.moveTo(0, 0);
+                ctx.lineTo(x_point, 0);
+                ctx.strokeStyle = '#E6E6FA';
+                ctx.lineWidth = 5;
+                ctx.stroke();
+          } 
+        </script>
+            </div>
+        </div>
+        <div class="col text-right">
+            <div class="me-lines-subtitle">
+                Lines
+            </div>
+            <br>
+            <div class="me-lines-description">
+                More random lines.
+                <canvas id="canvas2" width="250" height="100"></canvas>  
+        <script>  
+        var canvas2 = document.getElementById('canvas2');
+        if (canvas2.getContext) 
+         {
+            var ctx = canvas2.getContext("2d");
+             for (i = 0;i<5;i++) {
+                var x_point = Math.floor(Math.random() * 250) + 1;
+                ctx.beginPath();
+                ctx.moveTo(0, i*10+50);
+                ctx.lineTo(x_point, i*10+50);
+                ctx.strokeStyle = '#E6E6FA';
+                ctx.lineWidth = 5;
+                ctx.stroke();
+             }
+          } 
+        </script>
+            </div>
+        </div>
+        <div class="col">
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
